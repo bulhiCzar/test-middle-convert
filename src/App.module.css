@@ -117,7 +117,7 @@
 
 .calc {
     background-color: #F2F2F2;
-    padding: 25px 15px;
+    /*padding: 25px 15px;*/
     width: 20%;
     margin-left: 10px;
     border-radius: 5px 5px 0 0;
@@ -126,9 +126,17 @@
 }
 
 .title {
-    font-size: 1.6em;
+    /*font-size: 1.6em;*/
+    font-size: var(--fs-table);
+    font-weight: 800;
+    color: #FFF;
+    background-color: #2B9E91;
+    padding: calc(6px + (11 - 6) * ((100vw - 320px) / (1200 - 320) )) calc(6px + (15 - 6) * ((100vw - 320px) / (1200 - 320) ));
 }
 
+.calcBoby{
+    padding: 10px 15px;
+}
 .calcInput {
     display: flex;
     max-width: 100%;
@@ -137,6 +145,8 @@
 
 .calcInput > input, .calcInput > select {
     min-height: 32px;
+    /*border: 1px solid #E8C468;*/
+
 }
 
 .calcInput > input {
