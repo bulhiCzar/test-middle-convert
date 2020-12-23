@@ -3,7 +3,7 @@ import s from "../../App.module.css";
 
 const Table = ({
                    coins,
-                   setLikesCoins
+                   setLike
                })=>{
     const coinsPreloader = ['', '', '', '' , '', '','', '', '','']
 
@@ -35,7 +35,7 @@ const Table = ({
                                     <td>$ {item.RAW.USD.LOW24HOUR.toFixed(2)}</td>
                                     <td
                                         onClick={() => {
-                                            setLikesCoins(item.CoinInfo.Name)
+                                            setLike(item.CoinInfo.Name, item)
                                         }}
                                     >
                                         <svg

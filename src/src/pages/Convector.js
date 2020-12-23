@@ -1,7 +1,7 @@
 import s from "../../App.module.css";
 
 const Convector = ({state, setInput, coins, name})=>{
-
+    console.log(coins)
     return(
         <div className={s.calcInput}>
             <input
@@ -15,6 +15,7 @@ const Convector = ({state, setInput, coins, name})=>{
                     coins.map((item, idx) => {
                         return (
                             <option
+                                defaultValue={item.like ? 'selected' : ''}
                                 key={idx}
                                 data-name={name + 'Btn'}
                                 value={item.CoinInfo.Name}

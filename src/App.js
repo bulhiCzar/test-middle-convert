@@ -12,6 +12,27 @@ function App() {
         firstInput: 1, secondInput: 1, firstBtn: '', secondBtn: ''
     })
 
+    const setLike = (e)=>{
+        const obj = {
+            ...state,
+            firstInput: '',
+            secondInput: '',
+            firstBtn: {
+                value: coins[0].CoinInfo.Name,
+                price: coins[0].RAW.USD.PRICE
+            },
+            secondBtn: {
+                value: coins[0].CoinInfo.Name,
+                price: coins[0].RAW.USD.PRICE
+            }
+        }
+        console.log(e)
+
+        selectChang = obj
+        setState(obj)
+        setLikesCoins(e)
+    }
+
     const changeInput = e => {
         const name = e.name
         const value = e.value
@@ -93,7 +114,7 @@ function App() {
         <div className={s.main}>
             <div className={s.wrapper}>
                 <div className={s.wrptable}>
-                    <Table setLikesCoins={setLikesCoins} coins={coins}/>
+                    <Table setLike={setLike} coins={coins}/>
                 </div>
 
                 <div className={s.calc}>
