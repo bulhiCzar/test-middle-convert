@@ -15,7 +15,7 @@ const Convector = ({state, setInput, coins, name})=>{
                     coins.map((item, idx) => {
                         return (
                             <option
-                                defaultValue={item.like ? 'selected' : ''}
+                                selected={item.like ? 'selected' : ''}
                                 key={idx}
                                 data-name={name + 'Btn'}
                                 value={item.CoinInfo.Name}

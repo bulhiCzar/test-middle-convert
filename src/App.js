@@ -4,12 +4,12 @@ import {useData} from "./src/hooks/data.hooks";
 import Table from './src/pages/Table'
 import Convector from "./src/pages/Convector";
 
-let selectChang = {firstInput: 1, secondInput: 1, firstBtn: '', secondBtn: ''}
+let selectChang = {firstInput: '', secondInput: '', firstBtn: '', secondBtn: ''}
 
 function App() {
     const {coins, setLikesCoins} = useData()
     const [state, setState] = useState({
-        firstInput: 1, secondInput: 1, firstBtn: '', secondBtn: ''
+        firstInput: '', secondInput: '', firstBtn: '', secondBtn: ''
     })
 
     const setLike = (e)=>{
